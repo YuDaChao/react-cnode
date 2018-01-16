@@ -11,6 +11,7 @@ const queryString = (url, json) => {
 }
 
 export const get = (url, params) => {
+  params = params || {}
   return new Promise((resolve, reject) => {
     axios.get(queryString(`${baseUrl}/api${url}`, params))
       .then((resp) => {

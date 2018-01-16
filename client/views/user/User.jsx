@@ -30,13 +30,13 @@ class User extends React.Component {
         <div className={classes.avatar}>
           <div className={classes.bg} />
           {
-            user.avatar_url ?
-              <Avatar className={classes.avatarImg} src={user.avatar_url} /> :
+            user.info.avatar_url ?
+              <Avatar className={classes.avatarImg} src={user.info.avatar_url} /> :
               <Avatar className={classes.avatarImg}>
                 <UserIcon />
               </Avatar>
           }
-          <span className={classes.userName}>{user.loginname || '未登录'}</span>
+          <span className={classes.userName}>{user.info.loginname || '未登录'}</span>
         </div>
         {this.props.children}
       </Container>
