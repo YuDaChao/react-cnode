@@ -59,7 +59,7 @@ class Login extends React.Component {
         this.props.history.replace('/user/info')
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error) // eslint-disable-line
       })
   }
 

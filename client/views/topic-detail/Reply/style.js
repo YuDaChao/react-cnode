@@ -17,7 +17,7 @@ export default (theme) => {
       },
     },
     body: {
-      padding: '0 24px',
+      padding: '1px 24px',
       '& img': {
         maxWidth: '100%',
       },
@@ -33,7 +33,7 @@ export default (theme) => {
       justifyContent: 'space-between',
     },
     replies: {
-      margin: '0 24px',
+      margin: '24px',
     },
     root: {
       display: 'flex',
@@ -49,6 +49,34 @@ export default (theme) => {
       '& img': {
         maxWidth: '100%',
         display: 'block',
+      },
+    },
+    replyEditor: {
+      position: 'relative',
+      padding: 24,
+      borderBottom: '1px solid #dfdfdf',
+      '& .CodeMirror': {
+        height: 150,
+        minHeight: 'auto',
+        '& .CodeMirror-scroll': {
+          minHeight: 'auto',
+        },
+      },
+    },
+    noLoginButton: {
+      display: 'flex',
+      justifyContent: 'center',
+      padding: 24,
+    },
+    replyButton: {
+      position: 'absolute',
+      right: 40,
+      bottom: 65,
+      zIndex: 101,
+      opacity: 0.1,
+      transition: 'opacity .3s',
+      '&:hover': {
+        opacity: 1,
       },
     },
   }

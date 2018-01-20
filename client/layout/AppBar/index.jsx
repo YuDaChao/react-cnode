@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles } from 'material-ui/styles'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import AppBar from 'material-ui/AppBar'
 import ToolBar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
@@ -61,7 +61,11 @@ class MainAppBar extends React.Component {
             <Typography type="title" color="inherit" className={classes.flex}>
               CNode
             </Typography>
-            <Button raised color="accent">
+            <Button
+              raised
+              color="accent"
+              component={props => (<Link to="/topic" {...props} />)}
+            >
               创建话题
             </Button>
             <Button
